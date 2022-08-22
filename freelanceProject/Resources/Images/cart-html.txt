@@ -1,0 +1,124 @@
+<div class="container-fluid" style="direction: rtl;">
+  <div class="container">
+    <div class="row row-title bg-light shadow-lg p-3 ">
+      <h1 class="cart-title text-end fa fa-cart-arrow-down">سلة التسوق</h1>
+    </div>
+
+    <div class="row mt-5 mb-2 p-3">
+      <div class="col-9 border">
+        <table class="table bordered">
+          <thead class="p-2">
+            <tr>
+              <th style="width: 50px;">حذف</th>
+              <th>الصوره</th>
+              <th>المنتج</th>
+              <th>السعر</th>
+              <th>الكمية</th>
+              <th>المجموع</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+              <td>
+                <div><img class="product-image w-50" src="../../assets/images/لوحات فليكس.jpg" alt="" srcset=""></div>
+              </td>
+              <td>اوراق المراسلات-الاوراق الرسمية
+                الكمية:
+                100
+
+                الخامة:
+                ورق كونكورد - ابيض
+
+                المقاس:
+                A4
+
+                نوع التغليف:
+                دفتر 50 ورقه</td>
+              <td>200.00 ر.س الأسعار تشمل الضريبة</td>
+              <td class="plus-minus">
+                <div class="input-group inline-group">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-outline-success btn-minus">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                  </div>
+                  <input class="form-control quantity" min="0" name="quantity" value="1" type="number">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-success btn-plus">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </td>
+              <td class="calculate">5454.5</td>
+            </tr>
+
+            <tr>
+              <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+              <td>
+                <div><img class="product-image w-50" src="../../assets/images/لوحات فليكس.jpg" alt="" srcset=""></div>
+              </td>
+              <td>اوراق المراسلات-الاوراق الرسمية
+                الكمية:
+                100
+
+                الخامة:
+                ورق كونكورد - ابيض
+
+                المقاس:
+                A4
+
+                نوع التغليف:
+                دفتر 50 ورقه</td>
+              <td>200.00 ر.س الأسعار تشمل الضريبة</td>
+              <td class="plus-minus">
+                <div class="input-group inline-group">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-outline-success btn-minus">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                  </div>
+                  <input class="form-control quantity" min="0" name="quantity" value="1" type="number">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-success btn-plus">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </td>
+              <td class="calculate">5454.5</td>
+            </tr>
+          </tbody>
+
+        </table>
+        <tfoot>
+          <button class="btn border m-2 footer-btn"> تحديث سلة التسوق</button>
+        </tfoot>
+      </div>
+
+      <div class="col-3">
+        <div class="card">
+          <div class="card-header">
+            إجمالي سلة المشتريات
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">الشحن <span style="color: #0E7E4A;margin:2%">1000 ر.س</span></h5>
+            <p class="card-text">الأستلام من المعرض
+              سيتم تحديث خيارات الشحن أثناء السداد.
+              .</p>
+
+            <hr>
+            <h5 class="card-title  fw-bold pb-3">الإجمالي
+              <span class="span-card" style="color: #0E7E4A;margin:2%">1000 ر.س</span>
+            </h5>
+
+            <button class="btn border m-2 footer-btn"> التقدم لإتمام الطلب</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

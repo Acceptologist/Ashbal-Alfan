@@ -1,0 +1,21 @@
+1- Add to => pricing-request.component.html =>in the form tag : 
+  method="post" (ngSubmit)="onSubmit()"
+
+2- Add to => pricing-request.component.ts =>add  
+
+ WhatsAPI:string="https://wa.me/";
+ PhoneNumber:string="201288296439"
+ textMessage:any="";
+    onSubmit(){
+    console.log("Hi");
+    this.textMessage=`????? : ${this.messagForm.controls.name.value}%0A`;
+    this.textMessage+=`??? ?????? : ${this.messagForm.controls.phone.value}%0A`;
+    if(this.messagForm.controls.email.value !="")
+    this.textMessage+=`?????? ?????????? : ${this.messagForm.controls.email.value}%0A`;
+    if(this.messagForm.controls.subject.value !="")
+    this.textMessage+=`??????? : ${this.messagForm.controls.subject.value}%0A`;
+
+    this.textMessage+=`??????? : ${this.messagForm.controls.messageBody.value}`;
+    var url=this.WhatsAPI+this.PhoneNumber+"?text="+this.textMessage;
+    window.open(url);
+  }
