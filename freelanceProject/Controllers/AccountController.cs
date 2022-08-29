@@ -77,6 +77,30 @@ namespace freelanceProject.Controllers
             return Unauthorized();
         }
 
+        [HttpPost("/reset_Password")]
+        public async Task<IActionResult> reset_Password(ResetPasswordDTO resetPasswordDTO)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await userManager.FindByNameAsync(resetPasswordDTO.Username);
+                if (user != null)
+                {
+                    bool oldPass = await userManager.CheckPasswordAsync(user, resetPasswordDTO.OldPassword);
+                    if (oldPass)
+                    {
+                        //update password in user
+                        user.PasswordHash = resetPasswordDTO.NewPassword;
+                        await userManager.RemovePasswordAsync(user);
+                        await userManager.AddPasswordAsync(user, resetPasswordDTO.NewPassword);
+                        return Ok();
+
+                    }
+                }
+                ModelState.AddModelError("", "Username or Password are invalid ");
+            }
+            return Unauthorized();
+        }
+
 
     }
 }

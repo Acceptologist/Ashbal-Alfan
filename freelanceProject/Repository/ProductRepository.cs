@@ -74,8 +74,9 @@ namespace freelanceProject.Repository
 
         public void Update(Guid id, Product product)
         {
-            Product newProduct = GetById(id);
-     
+            Product newProduct = this.context.Products.Include(p=>p.ProductDetails).FirstOrDefault(d => d.Id == id);
+
+
             newProduct.Title = product.Title;
             newProduct.Image1 = product.Image1;
             newProduct.Image2 = product.Image2;
@@ -91,6 +92,8 @@ namespace freelanceProject.Repository
             newProduct.Category_Name = product.Category_Name;
             newProduct.isAmountExist= product.isAmountExist;
             newProduct.isTypeExist= product.isTypeExist;
+            newProduct.ProductDetails.Clear();
+            newProduct.ProductDetails=product.ProductDetails;
 
 
             context.SaveChanges();
